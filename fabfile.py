@@ -4,6 +4,7 @@ import os
 import shutil
 import sys
 import SocketServer
+import livereload
 
 from pelican.server import ComplexHTTPRequestHandler
 
@@ -90,3 +91,17 @@ def gh_pages():
     """Publish to GitHub Pages"""
     rebuild()
     local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
+
+def live_build(port=8000):
+    """Automated webpage reload when changes are made."""
+    local('make clean')
+    local('make html')
+    os.chdir('output')
+    server = livereload.Server()
+    server.watch('../content/*.rst',
+        livereload.shell('pelican -s ../pelicanconf.py -o ../output'))
+    server.watch('../theme/pure',
+        livereload.shell('pelican -s ../pelicanconf.py -o ../output'))
+    server.watch('*.html')
+    server.watch('*.css')
+    server.serve(liveport=35729, port=port)

@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Cory Robinson'
 SITENAME = u'SciProX'
-SITEURL = ''
+SITEURL = 'http://sciprox.com'
 
 PATH = 'content'
 
@@ -13,6 +13,16 @@ TIMEZONE = 'US/Central'
 DEFAULT_LANG = u'en'
 
 THEME = 'theme/pure'
+
+# post
+#ARTICLE_URL = 'posts/{date:%Y}-{date:%m}/{slug}'
+#ARTICLE_SAVE_AS = 'posts/{date:%Y}-{date:%m}/{slug}/index.html'
+
+# pages
+PAGE_URL = 'pages/{slug}.html'
+PAGE_SAVE_AS = 'pages/{slug}/index.html'
+DISPLAY_PAGES_ON_MENU = True
+PAGE_PATHS = ['pages']
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -28,8 +38,10 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('github-square', 'https://github.com/creedr'),
+          ('google-plus-square', 'https://plus.google.com/u/0/+CoryRobinson'),
+          ('linkedin-square', 'https://www.linkedin.com/in/cory-robinson-93976a15/'),
+          ('twitter-square', 'https://twitter.com/cory_rr'))
 
 DEFAULT_PAGINATION = 10
 
