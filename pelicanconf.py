@@ -27,8 +27,11 @@ ARTICLE_SAVE_AS = 'posts/{date:%Y}-{date:%m}/{slug}/index.html'
 # pages
 PAGE_URL = 'pages/{slug}/'
 PAGE_SAVE_AS = 'pages/{slug}/index.html'
-DISPLAY_PAGES_ON_MENU = True
 PAGE_PATHS = ['pages']
+
+# menu items
+MENUITEMS = (('about', 'pages/about/index.html'),)
+DISPLAY_PAGES_ON_MENU = True
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
