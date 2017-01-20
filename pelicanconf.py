@@ -14,12 +14,18 @@ DEFAULT_LANG = u'en'
 
 THEME = 'theme/pure'
 
+# sidebar stuff
+# TODO: set up some custom sidebar html stuff
+SIDEBAR_NAME = 'Cory Robinson'
+SIDEBAR_LOCATION = 'Houston, Texas'
+SIDEBAR_SUBNAME = 'science | computing | data'
+
 # post
-#ARTICLE_URL = 'posts/{date:%Y}-{date:%m}/{slug}'
-#ARTICLE_SAVE_AS = 'posts/{date:%Y}-{date:%m}/{slug}/index.html'
+ARTICLE_URL = 'posts/{date:%Y}-{date:%m}/{slug}/'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}-{date:%m}/{slug}/index.html'
 
 # pages
-PAGE_URL = 'pages/{slug}.html'
+PAGE_URL = 'pages/{slug}/'
 PAGE_SAVE_AS = 'pages/{slug}/index.html'
 DISPLAY_PAGES_ON_MENU = True
 PAGE_PATHS = ['pages']
