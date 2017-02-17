@@ -14,6 +14,10 @@ DEFAULT_LANG = u'en'
 
 THEME = 'theme/pure'
 
+# plugins
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = ['render_math']
+
 # sidebar stuff
 # TODO: set up some custom sidebar html stuff
 SIDEBAR_NAME = 'Cory Robinson'
