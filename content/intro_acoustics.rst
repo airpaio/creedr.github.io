@@ -39,3 +39,24 @@ Conservation Laws, and then move into numerical analysis and simulation of
 wave propagation which will have a somewhat detailed treatment of scientific
 computing, and then finally move into some other interesting applications
 of acoustics.
+
+
+Conservation Laws
+=================
+Acoustical systems, as well as most applications in science and engineering,
+are governed by the conservation laws such as the conservation of mass which
+says that mass cannot be either created or destroyed in a closed system. A
+closed system could be anything from a microscopic system up to the scale of
+our whole universe. For our acoustics problem, we will begin by considering
+the conservation of mass in a compressible fluid, and in particular, flow
+through a tube of gas where the density and velocity of the gas remains constant
+throughout. Considering this is a one-dimensional tube with space variable
+:math:`x`, let :math:`\rho(x,t)` represent density, and :math:`v(x,t)`
+represent velocity at point :math:`x` and time :math:`t`. Then we can
+measure the total mass :math:`m` in the tube with the integral
+
+.. math::
+
+\integral_{x_1}^{x_2} \rho(x,t)dx = m.
+
+Assuming that mass is conserved in this system
